@@ -385,53 +385,6 @@ PC用のスタイル
     margin-top: 40px;
   }
 
-  /* 導入企業（CASES） */
-  #cases {
-    margin: 40px auto 40px auto;
-    /* autoは中央寄せ */
-    width: 100%;
-  }
-
-  #cases>ul {
-    display: flex;
-    list-style: none;
-    /* リストマーカー（画像の左に出ていた・（てん））を非表示にする */
-    justify-content: center;
-    /* ul要素の上部分のベッタリくっついた状態で中央寄せ */
-  }
-
-  #cases>ul>li {
-    width: 33%;
-    /* 各li要素の幅を33％にすることで3つ横に並べる */
-    margin: 20px;
-    /* 各li要素に余白を入れて間隔を調整する */
-  }
-
-  .case-card {
-    background-color: #ffffff;
-    min-height: 400px;
-    /* 横に並んだ3つのli要素が、内容量が異なっても（説明が少ないliも）400pxまで高さを確保でき、全体の見た目が整う。 */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    /* 最初の5px:右へ5px、2つ目の5px:下へ5px、
-  15px:ぼかしの半径（影のぼけ度合い。大きく設定するほどぼける。 rgba:影の色（0,0,0)で、透明度20%(0.2)の半透明の影にしている */
-  }
-
-  .case-img {
-    width: 100%;
-  }
-
-  .case-info {
-    padding: 10px 20px 10px 20px;
-  }
-
-  .case-name {
-    color: #2710d5;
-    font-size: 19px;
-  }
-
-  .case-content {
-    font-size: 14px;
-  }
 
   /* お問い合わせ */
   #contact {
