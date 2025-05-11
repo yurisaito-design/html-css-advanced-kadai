@@ -1,0 +1,1483 @@
+/* PC、スマホ共通スタイル */
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+/*================
+PC用のスタイル
+=================*/
+@media screen and (min-width: 768px) {
+
+  /* メディアクエリとは：画面のサイズやデバイスの種類に応じてCSSのスタイルを切り替えるための仕組み。主にレスポンシブデザインを実現するために使われる。 */
+  /* ↑768pxはiPadの画面幅。iPad(768px)よりも大きい画面幅となる場合はPC用スタイル。iPadよりも小さい画面幅となる場合はスパートフォン用のスタイルを適用させる。 */
+  /* PC用スタイルの横幅設定 */
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc>a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  #nav-pc>a:link {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:visited {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:hover {
+    color: #0d0d0d;
+    text-decoration: underline;
+  }
+
+  #nav-pc>a:active {
+    color: #0d0d0d;
+  }
+
+  /* PC画面で表示しているときは、スマホ用ナビを非表示 */
+  #nav-sp,
+  #menu-sp {
+    display: none;
+  }
+
+  /* メインビジュアル*/
+  #main-visual {
+    position: relative;
+    height: 400px;
+  }
+
+  #main-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2710d5;
+    color: #ffffff;
+    border-radius: 0 0 476px 0;
+    max-width: 620px;
+    height: 100%;
+    width: 100%;
+    z-index: 11;
+  }
+
+  #main-message>h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 100px 0 0 50px;
+  }
+
+  #main-message>p {
+    font-size: 28px;
+    margin: 0 0 0 50px;
+  }
+
+  #main-visual>img {
+    max-width: 620px;
+    border-radius: 476px 0 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  /* 見出し */
+  h2 {
+    margin: 40px 0 0 0;
+  }
+
+  h2::after {
+    content: url("images/line.png");
+    margin-left: 10px;
+  }
+
+  h3 {
+    font-size: 27px;
+  }
+
+  /* ミッション */
+  #mission {
+    margin: 80px auto 80px auto;
+    width: 100%;
+  }
+
+  #mission-flex {
+    width: 100%;
+    display: flex;
+  }
+
+  #mission-flex>div {
+    width: 50%;
+    margin: 20px;
+  }
+
+  #mission-photo {
+    width: 100%;
+  }
+
+  #s2dgs {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  /* プロダクト */
+  #product {
+    background-color: #fafafa;
+    margin: 80px 0 80px 0;
+    padding: 10px 40px 0px 40px;
+  }
+
+  /* 外側 */
+  #product>div {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  /* 左のカラム */
+  #product-left {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  /* 右のカラム */
+  #product-right {
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 80px;
+  }
+
+  /* 画像+説明の枠 */
+  #product-left>div {
+    position: relative;
+    height: 480px;
+    margin-right: 20px;
+  }
+
+  #product-right>div {
+    position: relative;
+    height: 480px;
+    margin-left: 20px;
+  }
+
+  /* 画像 */
+  .product-photo {
+    width: 100%;
+  }
+
+  /* 説明文の枠 */
+  .product-explain {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 280px;
+    margin: 0 40px 0 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 説明文の英語 */
+  .product-explain>span {
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /* 説明文の見出し */
+  .product-explain>h3 {
+    font-size: 20px;
+    margin: 5px 0 5px 0;
+  }
+
+  /* 説明文 */
+  .product-explain>p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* 「もっとみる」ボタン */
+  #product-more {
+    margin: 0 auto -42px auto;
+  }
+
+  /* ABOUT US */
+  #aboutus {
+    margin: 80px auto 80px auto;
+  }
+
+  /* 3つの組織文化と画像を入れる枠 */
+  #aboutus>div {
+    display: flex;
+  }
+
+  /* 画像 */
+  .culture-img {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  /*align-selfは「自分だけ位置を変える」プロパティ。flex-startはflexコンテナに上揃えでぴったりくっつく。*/
+
+  .culture-img2 {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  /* 3つの組織文化の表 */
+  .culture-table {
+    margin-right: 50px;
+  }
+
+  /* 番号 */
+  .culture-num {
+    font-size: 80px;
+    color: #2710d5;
+    margin: 0 20px 0 0;
+  }
+
+  /* 組織文化英語 */
+  .culture-en {
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    /*次に来る要素（組織文化日本語）が改行されるための記述 */
+  }
+
+  /* 組織文化日本語 */
+  .culture-jp {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  /* 説明文 */
+  .culture-description {
+    margin: 0;
+  }
+
+  /* ビジョン */
+  #vision {
+    margin: 80px auto 80px auto;
+  }
+
+  /* セクション内の外枠（7つの行動指針をまとめている大きいdiv） */
+  #vision>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* 7つの行動指針の枠 */
+  .vision-box {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .vision-box>img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+  }
+
+  .vision-box>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 31;
+    margin-right: 20px;
+  }
+
+  .vision-box>span>h4 {
+    color: #2710d5;
+    font-size: 19px;
+    margin: 80px 0 0 0;
+  }
+
+  .vision-box>span>h4::first-letter {
+    font-size: 40px;
+  }
+
+  .vision-box>span>h5 {
+    font-size: 20px;
+    margin: 0 0 0 0;
+  }
+
+  .vision-box>span>p {
+    margin: 10px 0 0 0;
+  }
+
+  /* 会社概要 */
+  #company {
+    margin: 80px auto 80px auto;
+  }
+
+  #company-table {
+    width: 100%;
+  }
+
+  .tableheader {
+    text-align: left;
+    padding: 20px;
+    border-bottom-color: #2710d5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 100px;
+  }
+
+  .tableheader-first {
+    text-align: left;
+    padding: 20px;
+    border-bottom-color: #2710d5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-color: #2710d5;
+    border-top-width: 1px;
+    border-top-style: solid;
+    width: 100px;
+  }
+
+  .cell {
+    padding: 30px;
+    border-bottom-color: #ececec;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .cell-first {
+    padding: 30px;
+    border-bottom-color: #ececec;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-color: #ececec;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+  #company>iframe {
+    width: 100%;
+    height: 368px;
+    margin-top: 40px;
+  }
+
+
+  /* お問い合わせ */
+  #contact {
+    margin: 80px auto 80px auto;
+  }
+
+  /* 外側 */
+  #contact>form>div {
+    display: flex;
+    flex-direction: row;
+    /* ↑左から右へ並べるコード */
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+
+  /* 左列の見出し */
+  .contact-heading {
+    width: 240px;
+    align-self: center;
+  }
+
+  /* 見出しのラベル */
+  .contact-label {
+    font-weight: bold;
+  }
+
+  /* 必須 */
+  .contact-span {
+    color: #ce2222;
+    margin: 0 0 0 20px;
+    font-weight: bold;
+  }
+
+  /* テキストボックス */
+  .contact-textbox {
+    border-top: 0;
+    /* 枠線の上・左・右をborder-⚪︎⚪︎: 0で非表示にする */
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    background-color: #fafafa;
+    width: 400px;
+    height: 56px;
+  }
+
+  /* お問い合わせ内容のテキストエリア */
+  .contact-textarea {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    /* solidは実線 */
+    background-color: #fafafa;
+    width: 400px;
+    height: 200px;
+  }
+
+  /* 個人情報の取り扱い */
+  details {
+    width: 700px;
+  }
+
+  details>div {
+    background-color: #fafafa;
+    padding: 20px;
+    /* paddingは内側の余白 */
+  }
+
+  details>div>span {
+    font-weight: bold;
+  }
+
+  /* フッター */
+  footer {
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 80px 80px 30px 80px;
+  }
+
+  #footer-logo {
+    margin-bottom: 30px;
+  }
+
+  #footer-link {
+    margin-bottom: 50px;
+  }
+
+  #footer-link>a {
+    text-decoration: none;
+    /* リンクの下線を非表示 */
+    margin: 10px;
+  }
+
+  #footer-link>a:link {
+    color: #ffffff;
+    /* 未訪問リンクの色を白 */
+  }
+
+  #footer-link>a:visited {
+    color: #ffffff;
+    /* 訪問済みリンクの色も白にする */
+  }
+
+  #footer-link>a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    /* マウスホバー時の色を白のままに。下線を表示して、リンクであることを視覚的に強調する */
+  }
+
+  #footer-link>a:active {
+    color: #ffffff;
+    /* クリック中（押している間）のリンクの色も白にする */
+  }
+
+  #sns-footer {
+    text-align: left;
+    /* 水平方向で左寄せ */
+    width: 100%;
+  }
+
+  #sns-footer>a {
+    margin-right: 30px;
+    /* SNSアイコンの間に間隔をあける */
+  }
+
+  #copyright {
+    color: #ffffff;
+    float: right;
+    /* float: right;は、親要素の右側に浮かせて配置する。 */
+  }
+
+  /* mission.html用スタイル */
+  /* ミッションのメインビジュアル */
+  #mission-main {
+    height: 496px;
+    width: 100%;
+    background-image: url("images/mission/mission-main.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    /* MISSIONページのメインビジュアル部分 */
+    /* 背景画像を垂直方向（y軸）における中央(center）に配置。 */
+    /* 画像を繰り返し表示しない。1枚だけ。 */
+  }
+
+  #mission-title {
+    background-color: #2710d5;
+    width: 368px;
+    color: #ffffff;
+    height: 496px;
+    border-radius: 0 248px 248px 0;
+    position: relative;
+    /* 青背景のタイトルボックス部分 */
+    /* 高さは↑の背景画像と同じ496px */
+    /* border-radiusはようその角を丸くするコード */
+    /* position: relative; によって、子要素の絶対配置の基準となる。 */
+
+  }
+
+  #mission-title>h1 {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    font-size: 80px;
+    /* 英語表記のMISSION（ページ見出し）を左上に大きく配置 */
+  }
+
+  #mission-title>span {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    font-size: 26px;
+    /* 日本語表記「ミッション」中央寄りに配置 */
+  }
+
+  #mission-title>div {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+    font-size: 16px;
+    /* パンくずリストを下の方に配置 */
+  }
+
+  #mission-s2dgs {
+    width: 100%;
+    margin: 20px;
+    /* 余白は上下左右に20px */
+  }
+
+  .mission-h2 {
+    color: #2710d5;
+    font-size: 40px;
+  }
+
+  .mission-h2::after {
+    content: none;
+    /* .mission-h2::afterは、.mission-h2 に対する疑似要素 ::after */
+    /* content: none は、後ろに自動的に追加される装飾（今回だと線）を表示しない設定。 */
+  }
+
+  #mission-5goals {
+    margin: 20px;
+    display: flex;
+    /* display: flex;は、子要素を横並びで配置する */
+  }
+
+  #mission-5goals>div {
+    flex-grow: 1;
+    /* flex-growは、アイテムをどれだけ伸ばして、フレックスアイテム（flexコンテナの子要素)内の空きスペースをどれだけ埋めるかを指定するもの */
+    /* 初期値：0は伸びない。数値が大きいほど、そのアイテムが多くスペースを取る */
+    /* 今回は「1」を設定しているので、各子要素が等しい割合でスペースを伸ばして並ぶようになっている */
+    padding: 20px;
+  }
+
+  #mission-5goals>div>div {
+    margin-bottom: 40px;
+  }
+
+  .fivegoals-image-right {
+    float: right;
+    /* 要素を右に寄せ、他の要素（テキストなど）は左側に回り込ませる。※今回だと、画像を右に寄せてテキストを画像の左側に配置する。 */
+    margin: 20px;
+  }
+
+  .fivegoals-image-left {
+    float: left;
+    /* 要素を左に寄せ、他の要素（テキストなど）は右側に回り込ませる。※今回だと、画像を左に寄せてテキストを画像の右側に配置する。 */
+    margin: 20px;
+  }
+
+  .fivegoals-number {
+    color: #2710d5;
+    font-size: 48px;
+    margin: 0;
+  }
+
+  .fivegoals-h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .fivegoals-p {
+    margin: 0;
+  }
+
+  /* プロダクトページ */
+  #product-main {
+    height: 496px;
+    width: 100%;
+    background-image: url("images/product/product-main.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+
+  #product-title {
+    background-color: #2710d5;
+    width: 368px;
+    color: #ffffff;
+    height: 496px;
+    border-radius: 0 248px 248px 0;
+    /* 青い背景の右側を丸く設定 */
+    position: relative;
+    /* メインビジュアルの見出し後ろにある青い背景部分 */
+  }
+
+  #product-title>h1 {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    font-size: 80px;
+    /* 英語見出し */
+  }
+
+  #product-title>span {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    font-size: 26px;
+    /* 日本語見出し */
+  }
+
+  #product-title>div {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+    font-size: 16px;
+    /* パンくずリスト部分 */
+  }
+
+  /* セクション1 */
+  .product-section1 {
+    position: relative;
+    margin: 20px;
+    height: 340px;
+  }
+
+  .product-section1>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    margin: 0 40px 30px 0;
+    border-radius: 0 432px 0 0;
+    /* 画像の右上を丸く設定 */
+  }
+
+  .product-section1>div {
+    position: absolute;
+    top: 0;
+    left: 480px;
+  }
+
+  /* セクション2 */
+  .product-section2 {
+    position: relative;
+    margin: 20px;
+    height: 340px;
+  }
+
+  .product-section2>img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* 画像を右上に配置 */
+    width: 450px;
+    margin: 0 0 30px 40px;
+    border-radius: 432px 0 0 0;
+    /* 画像の左上を丸く設定 */
+  }
+
+  .product-section2>div {
+    width: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* テキストブロックが左側に表示されるように設定 */
+  }
+
+  .product-h2 {
+    color: #2710d5;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .product-h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+}
+
+/*====================
+ スマートフォン用のスタイル
+ =====================*/
+/* 767px以下の幅となる場合は、以下bodyのスマートフォン用スタイルを適用させる。 ※767px以上はPC用を適用。*/
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  /* スマホ用スタイルを適用してる時に、PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー ※横3本線のボタン部分 */
+  #menu-sp {
+    float: right;
+    padding: 0;
+    /* float:要素を右端に寄せて配置。padding:要素の内側の余白をすべてゼロにする（これにより、ボタンのクリック範囲が狭くなったり、見た目がスッキリする） */
+  }
+
+  /* スマホ用ナビゲーションの表示切り替え */
+  /* 初期状態、レイアウトと非表示設定 */
+  /* 以下は、スマートフォン用ナビゲーションメニュー（#nav-sp）の初期状態を設定するもの。 */
+  /* ハンバーガーメニューボタン押下後の表示画面状態を設定している */
+  #nav-sp {
+    background-color: #2710d5;
+    position: absolute;
+    /* ブラウザ画面の左上から表示されるように配置（絶対配置）。 */
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* 画面全体に表示している（縦横100％) */
+    display: none;
+    /* 初期設定では非表示。ハンバーガーメニューボタンを押すまでは画面出ないように設定。 */
+    z-index: 100;
+    /* 他の要素より前面に表示させるためのレイヤー順序。値が高いほど上に表示される。 */
+  }
+
+  /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* 画面右上に「×（閉じるボタン）」を固定表示するための設定 */
+    /* 要素を親要素（#nav-sp）内で絶対位置に配置 */
+    /* top: 20px; right: 20px;は親要素の右上から20pxずつ内側に配置。 */
+  }
+
+  /* ナビゲーションメニュー用「SocialTech」ロゴ */
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+
+  /* ナビゲーションのリンクを装飾設定 */
+  #nav-sp>a {
+    display: block;
+    /* block要素にすると幅を指定しない限り、リンク全体がクリック可能な領域になり、スマホ操作しやすくなる */
+    /* block要素の特徴:①横幅いっぱいに広がる(親要素の横幅をすべて使う) ※今回だと各メニュー（MISSIONとか）の横幅。
+    ②前後に改行が入る(他の要素とは別の行に表示される) ③width や height などで、CSSにて高さや幅を自由に設定できる */
+  }
+
+  #nav-sp>a:link {
+    color: #ffffff;
+    /* 未訪問時 */
+  }
+
+  #nav-sp>a:visited {
+    color: #ffffff;
+    /* 訪問済み */
+  }
+
+  #nav-sp>a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    /* ホバー中 */
+  }
+
+  #nav-sp>a:active {
+    color: #ffffff;
+    /* クリック中 */
+  }
+
+  #nav-sp>.menu {
+    text-decoration: none;
+    /* 下線を非表示 */
+    display: block;
+    margin: 0 20px 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    /* 矢印画像を表示 */
+    background-repeat: no-repeat;
+    /* background-repeatの初期設定では、背景画像(矢印画像)を縦横にタイル状に繰り返されて全体を埋め尽くすように表示するようになっているので、
+    「no-repeat」で1回だけ表示するようにしている。 */
+    background-position: right top;
+    /* 矢印画像を右上に表示させる */
+  }
+
+  #sns {
+    position: absolute;
+    /* 親要素を基準に絶対位置で配置 */
+    bottom: 20px;
+    left: 20px;
+    /* ハンバーガーメニューボタン押下後の表示画面にて、画面上の左下に固定表示される */
+  }
+
+  #sns>a {
+    margin-right: 30px;
+    /* 各SNSアイコン(<a>タグ)に対して、右に余白を入れて適度なスペースを空けている */
+  }
+
+  /* メインビジュアル */
+  #main-visual {
+    position: relative;
+    /* relative：（以下に記述される）子要素を absolute で配置するための基準位置 */
+    height: 470px;
+    width: 100%;
+    overflow: hidden;
+    /* 要素のボックス（領域）からはみ出した（以下に記述される）子要素の部分を非表示にする */
+  }
+
+  #main-visual>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2710d5;
+    color: white;
+    border-radius: 0 0 476px 0;
+    /* 下辺の右側に大きく丸みを付ける（アーチのような形状にする）。 */
+    text-align: center;
+    /* 水平方向の中央に配置 */
+    height: 280px;
+    width: 100%;
+    z-index: 11;
+    /* 下の画像より上に表示されるようにする。 */
+  }
+
+  #main-visual>div>h1 {
+    font-size: 28px;
+    margin: 90px 0 0 0;
+    /* 上から90pxの余白を取って、下に中央揃えで見出し表示。 */
+  }
+
+  #main-visual>div>p {
+    margin: 0;
+  }
+
+  #main-visual>img {
+    width: 100%;
+    /* 背景画像のように画面下に大きく広がる画像。 */
+    border-radius: 476px 0 0 0;
+    /* 左上に丸みを付けたデザイン。 */
+    z-index: 10;
+    /* 上のテキストより下に配置。 */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* 見出し */
+  h2::after {
+    /* h2::after は 疑似要素で、<h2(見出し)> 要素の直後に追加の内容を表示する指定 */
+    content: url("images/line.png");
+    /* 見出しの後に画像（line.png)を表示する */
+    margin-left: 10px;
+    /* 見出しと画像の間に10pxの余白を入れて間隔を確保。 */
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+  }
+
+  /* ミッション */
+  #mission {
+    margin: 20px;
+  }
+
+  #mission-photo {
+    width: 100%;
+  }
+
+  #s2dgs {
+    width: 100%;
+  }
+
+  /* プロダクト */
+  #product {
+    background-color: #fafafa;
+    padding-top: 10px;
+  }
+
+  #product h2 {
+    margin-left: 20px;
+  }
+
+  /* 外側 */
+  /* 左右のカラム　スマホでは縦並び */
+  #product-left,
+  #product-right {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  /* 画像＋説明の枠 */
+  #product-left>div,
+  #product-right>div {
+    position: relative;
+    height: 540px;
+  }
+
+  /* 説明文の枠 */
+  .product-explain {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .product-explain>span {
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+  }
+
+  .product-explain>h3 {
+    margin: 10px 0 10px 0;
+  }
+
+  /* 画像 */
+  .product-photo {
+    width: 100%;
+  }
+
+  #product-more>img {
+    margin: 0 0 -42px 20px;
+    /* 「もっとみる」の画像配置についてのコード */
+  }
+
+  /* ABOUT US */
+  #aboutus {
+    margin: 80px 20px 80px 20px;
+    /* ABOUT US全体の外側余白を指定。 */
+  }
+
+  #aboutus>div {
+    display: flex;
+    flex-direction: column;
+    /* clumn:子要素を縦に並べる */
+  }
+
+  .culture-table {
+    width: 100%;
+    padding-right: 20px;
+    order: 2;
+    /* order: 2 は親のflexbox内で表示順を２番目に指定している */
+  }
+
+  .culture-img {
+    width: 100%;
+    order: 1;
+    /* 「.culture-table」より先に表示 */
+  }
+
+  .culture-img2 {
+    width: 100%;
+  }
+
+  .culture-num {
+    font-size: 80px;
+    color: #2710d5;
+  }
+
+  .culture-en {
+    color: #2710d5;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    /* display: block;によって、次に来る「.culture-jp」の手前で改行される */
+  }
+
+  .culture-jp {
+    display: block;
+    /* display: block;により改行され、次に来る「.culture-description」が1行分のブロックとして独立して表示される */
+  }
+
+  .culture-description {
+    margin: 0;
+    /* ブラウザがデフォルトで持つ段落の余白をゼロにリセットして、デザイン上の意図した余白調整をしやすくしている */
+  }
+
+  /* ビジョン */
+  #vision {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .vision-box {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .vision-box>img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    /* position: absolute; で .vision-box の左上（top: 0; left: 0;）に重ねて配置 */
+    /* z-index: 30;で重なり順を最前面にする */
+    /* width: 100% は「vision-box」の幅に画像をフィットさせ、height: auto; でアスペクト比を維持して縮小。 */
+  }
+
+  .vision-box>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 31;
+    margin-right: 20px;
+    /* span:h4,h5,pをまとめた部分 */
+    /* この span 要素は .vision-box の中にあり、画像の上にテキストを重ねるために絶対位置指定されています。 */
+    /* top: 0; left: 0; → ボックスの左上に配置。 */
+    /* z-index: 31; → 背景画像（z-index: 30）より手前に表示。 */
+    /* margin-right: 20px; は右側に余白を設けています */
+  }
+
+  .vision-box>span>h4 {
+    color: #2710d5;
+    font-size: 19px;
+    margin: 60px 0 0 0;
+    /* 「CUSTOMER IS BOSS」とかの部分 */
+  }
+
+  .vision-box>span>h5 {
+    font-size: 20px;
+    margin: 0 0 0 0;
+  }
+
+  .vision-box>span>p {
+    margin: 10px 0 0 0;
+  }
+
+  /* 会社概要 */
+  #company {
+    margin: 0 20px 0 20px;
+  }
+
+  #company>h3 {
+    margin-bottom: 20px;
+  }
+
+  #company>table {
+    width: 100%;
+    /* 親要素いっぱいに広げる */
+  }
+
+  .tableheader-first {
+    /* 最初の見出しのセル（th:会社名）の設定 */
+    text-align: left;
+    /* テキストを水平方向で左寄せ */
+    border-bottom-color: #2710d5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-color: #2710d5;
+    border-top-width: 1px;
+    border-top-style: solid;
+    width: 50px;
+    /* 上下に濃い青の線(最初だけ上下の設定をして、以降のセルは下線のみの設定で良いようにしている) */
+    /* 線は、常にセルの全幅にわたって表示される(今回だと、「th」のセルの幅に沿った部分に線が引かれている */
+  }
+
+  .tableheader {
+    text-align: left;
+    padding: 20px;
+    border-bottom-color: #2710d5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 50px;
+    /* 一番最初以外のthセル */
+  }
+
+  .cell {
+    /* thの内容を説明するセル部分 */
+    padding: 20px;
+    border-bottom-color: #ececec;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    /* solidは実線 */
+  }
+
+  .cell-first {
+    padding: 20px;
+    border-bottom-color: #ececec;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-color: #ececec;
+    border-top-width: 1px;
+    border-top-style: solid;
+    /* 最初のセルなので、上下線の設定をしておく */
+  }
+
+  #company>iframe {
+    /* 会社所在地などの地図を表示するiframeに対しての設定 */
+    width: 100%;
+    height: 240px;
+    margin: 40px 0 0 0;
+  }
+
+  /* お問い合わせ */
+  #contact {
+    margin: 80px 20px 80px 20px;
+  }
+
+  #contact>h3 {
+    margin-bottom: 20px;
+  }
+
+  #contact>form>div {
+    margin-bottom: 20px;
+  }
+
+  .contact-heading {
+    margin-bottom: 20px;
+  }
+
+  /* ラベル(「お名前」や「メールアドレス」などの見出し） */
+  .contact-label {
+    font-weight: bold;
+  }
+
+  /* 必須 */
+  .contact-span {
+    color: #ce2222;
+    margin: 0 0 0 20px;
+    font-weight: bold;
+  }
+
+  .contact-textbox {
+    /* 問い合わせ以外のテキストボックス */
+    height: 56px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    /* 上・左・右の枠線を消し、下線だけ残す */
+    background-color: #fafafa;
+    border-bottom-color: #707070;
+    border-bottom-width: 1px;
+    border-style: solid;
+    min-width: 300px;
+    width: 100%;
+    /* 幅を最低300pxで、親要素に合わせて100％まで広がる */
+  }
+
+  .contact-textarea {
+    /* 問い合わせ用テキストボックスの設定 */
+    height: 150px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #fafafa;
+    width: 100%;
+  }
+
+  .radiobutton {
+    margin-bottom: 20px;
+  }
+
+  .radiobutton+label:after {
+    /* ⚪︎（ラジオボタン） お電話 の表示部分 */
+    content: "\A";
+    white-space: pre;
+    /* .radiobutton クラスの後に続く <label> 要素の後ろに改行（\A）を追加。 */
+    /* white-space: pre によって、\A が改行として表示される。 */
+    /* お電話・メール・どちらでもが3行で表示されるようになる */
+  }
+
+  /* フッター */
+  footer {
+    background-color: #0d0d0d;
+    padding: 30px 20px 50px 20px;
+  }
+
+  #footer-logo {
+    margin-bottom: 30px;
+  }
+
+  #footer-link {
+    margin-bottom: 50px;
+  }
+
+  #footer-link>a {
+    text-decoration: none;
+    /* リンクの下線を消す */
+    margin: 0 20px 30px 0;
+    display: block;
+    /* <a> をブロック要素化（上下にスペースがとれる、幅いっぱい使える）。縦並びにする。 */
+    background-image: url("images/arrow.png");
+    /* 背景に矢印画像を表示。 */
+    background-repeat: no-repeat;
+    /* 背景画像の繰り返しを禁止。 */
+    background-position: right top;
+    /* 背景画像を右上に配置。(この設定により、リンクの右上に矢印画像が付く) */
+  }
+
+  #footer-link>a:link {
+    color: #ffffff;
+    /* クリック前 */
+  }
+
+  #footer-link>a:visited {
+    color: #ffffff;
+    /* クリック後 */
+  }
+
+  #footer-link>a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    /* ホバー時 */
+  }
+
+  #footer-link>a:active {
+    color: #ffffff;
+    /* クリックしてる最中 */
+  }
+
+  #sns-footer>a {
+    margin-right: 30px;
+    /* フェイスブック・ツイッター・ユーチューブのアイコン */
+  }
+
+  #copyright {
+    font-size: 12px;
+    display: block;
+    margin-top: 30px;
+    color: #ffffff;
+  }
+
+  /* mission.html用スタイル */
+  /* ミッションのメインビジュアル */
+  #mission-main {
+    height: 256px;
+    width: 100%;
+    background-image: url("images/mission/mission-main.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    /* 背景画像を縦方向(y軸)に中央寄せ */
+    background-size: auto 280px;
+    /* 背景画像のサイズを「高さ280px」、横は自動に指定。 */
+  }
+
+  #mission-title {
+    background-color: #2710d5;
+    width: 136px;
+    color: #ffffff;
+    height: 256px;
+    /* 親要素の高さと一緒 */
+    border-radius: 0 248px 248px 0;
+    /* 右側を大きく丸める */
+    position: relative;
+    /* ↓の要素にabsoluteを使うための設定 */
+    /* 背景画像の上に重ねて表示されるタイトル */
+  }
+
+  #mission-title>h1 {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 40px;
+    /* 「MISSION」という英語見出し部分 */
+  }
+
+  #mission-title>span {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    font-size: 18px;
+    /* 「ミッション」という日本語表記部分 */
+  }
+
+  #mission-title>div {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    font-size: 13px;
+    /* TOP>MISSIONのパンくずリストの部分 */
+  }
+
+  /* ミッションページ　S2DGSの設定 */
+  #mission-s2dgs {
+    margin: 20px;
+  }
+
+  .mission-h2 {
+    color: #2710d5;
+    font-size: 38px;
+    margin: 0px;
+    /* 上下左右余白なし */
+  }
+
+  .mission-h2::after {
+    content: none;
+    /* .mission-h2以降の要素を非表示にする */
+  }
+
+  #mission-s2dgs>img {
+    width: 100%;
+  }
+
+  /* ミッションページ ５goalsの設定 */
+  #mission-5goals {
+    margin: 20px;
+  }
+
+  #mission-5goals>div>div {
+    margin-bottom: 40px;
+    /* 画像＋テキストのdiv */
+  }
+
+  #s2dgs-image {
+    width: 100%;
+  }
+
+  .fivegoals-image-right {
+    margin: 20px auto 20px auto;
+    display: block;
+    /* ブロック要素化（上下にスペースがとれる、幅いっぱい使える）。縦並びにする。 */
+  }
+
+  .fivegoals-image-left {
+    margin: 20px auto 20px auto;
+    display: block;
+    /* ブロック要素化（上下にスペースがとれる、幅いっぱい使える）。縦並びにする。 */
+  }
+
+  .fivegoals-number {
+    color: #2710d5;
+    font-size: 48px;
+    margin: 0;
+  }
+
+  .fivegoals-h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .fivegoals-p {
+    margin: 0;
+  }
+
+  /* プロダクトページ */
+  #product-main {
+    height: 256px;
+    width: 100%;
+    background-image: url("images/product/product-main.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: auto 208px;
+    /* メインビジュアルのサイズ：横は自動。高さは208px */
+  }
+
+  #product-title {
+    /* h1,span,パンくずリストをまとめた部分 */
+    background-color: #2710d5;
+    width: 136px;
+    color: #ffffff;
+    height: 256px;
+    /* product-mainと同じ高さ */
+    border-radius: 0 248px 248px 0;
+    /* 右側だけ大きく丸くなるように設定 */
+    position: relative;
+  }
+
+  #product-title>h1 {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 40px;
+  }
+
+  #product-title>span {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    font-size: 18px;
+  }
+
+  #product-title>div {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    font-size: 13px;
+    /* パンくずリスト */
+  }
+
+  .product-section1 {
+    margin: 20px;
+  }
+
+  .product-section1>img {
+    width: 100%;
+    border-radius: 0 300px 0 0;
+    /* 画像の右上だけ丸くなるように設定 */
+  }
+
+  .product-section2 {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column;は、縦方向に要素を並べるFlexboxの設定 */
+  }
+
+  .product-section2>img {
+    order: 1;
+    /* 一番最初に表示される */
+    width: 100%;
+    border-radius: 300px 0 0 0;
+    /* 画像の左上だけ丸くなるように設定 */
+  }
+
+  .product-section2>div {
+    order: 2;
+    /* Flexbox内で2番目に配置 */
+  }
+
+  .product-h2 {
+    color: #2710d5;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .product-h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+}
